@@ -1,0 +1,1 @@
+view klient/kalendarz
