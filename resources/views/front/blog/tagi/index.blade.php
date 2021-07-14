@@ -1,0 +1,1 @@
+view /strona/blog/tagi
