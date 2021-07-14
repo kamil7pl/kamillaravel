@@ -8,6 +8,6 @@ class KlientKalendarzController extends Controller
 {
     public function show()
     {
-        return view('front.klient.kalendarz.index');
+        return view('klient.kalendarz.index');
     }
 }

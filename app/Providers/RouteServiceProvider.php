@@ -48,8 +48,11 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/web.php'));
 
             Route::middleware(['web', 'auth'])
-                ->namespace($this->namespace.'\Front\Strona')
-                ->group(base_path('routes/custom/front.php'));
+                ->namespace($this->namespace.'\Klient')
+                ->group(base_path('routes/custom/klient.php'));
+            Route::middleware(['web', 'auth'])
+                ->namespace($this->namespace.'\User')
+                ->group(base_path('routes/custom/user.php'));
         });
     }
 

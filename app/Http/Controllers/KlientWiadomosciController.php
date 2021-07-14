@@ -8,6 +8,6 @@ class KlientWiadomosciController extends Controller
 {
     public function show()
     {
-        return view('front.klient.wiadomosci.index');
+        return view('klient.wiadomosci.index');
     }
 }

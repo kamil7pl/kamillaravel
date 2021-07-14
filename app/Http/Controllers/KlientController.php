@@ -8,6 +8,6 @@ class KlientController extends Controller
 {
     public function show()
     {
-        return view('front.klient.index');
+        return view('klient.index');
     }
 }
