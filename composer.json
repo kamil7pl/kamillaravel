@@ -11,7 +11,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "3.3.0"
+        "laravel/ui": "3.3.0",
+        "mnastalski/przelewy24-php": "^0.0.3"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
