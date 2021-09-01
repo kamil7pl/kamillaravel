@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/grid','App\Http\Controllers\GridController@show');
+Route::get('/laravelcollective', [App\Http\Controllers\LaravelcollectiveController::class, 'index'])->name('laravelcollective');
+Route::post('/laravelcollectivepost', [App\Http\Controllers\LaravelcollectiveController::class, 'show'])->name('laravelcollectivepost');
