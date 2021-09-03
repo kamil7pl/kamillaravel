@@ -15,7 +15,15 @@ class RequestController extends Controller
     public function store(CarRequest $request)
     {
         Car::create([
-            'name' => $request->get('name')
+        'rocznik' => $request->get('rocznik'),
+        'typ-silnika' => $request->get('typ-silnika'),
+        'pojemnosc-silnika' => $request->get('pojemnosc-silnika'),
+        'typ-nadwozia' => $request->get('typ-nadwozia'),
+        'liczba-miejsc' => $request->get('liczba-miejsc'),
+        'przebieg' => $request->get('przebieg'),
+        'moc-silnika' => $request->get('moc-silnika'),
+        'skrzynia-biegow' => $request->get('skrzynia-biegow'),
+        'kolor' => $request->get('kolor')
         ]);
         return view('request.index');
     }
