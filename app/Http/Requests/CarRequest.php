@@ -24,7 +24,48 @@ class CarRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => [
+            'rocznik' =>[
+                'required',
+                'integer',
+               'min:1900',
+               'max:2021'
+            ],
+            'typ-silnika' =>[
+                'required',
+                'string'
+            ],
+            'pojemnosc-silnika' =>[
+                'required',
+                'integer',
+               'min:1',
+               'max:3'
+            ],
+            'typ-nadwozia' =>[
+                'required',
+                'string'
+            ],
+            'liczba-miejsc' =>[
+                'required',
+                'integer',
+               'min:1',
+               'max:10'
+            ],
+            'przebieg' =>[
+                'required',
+                'integer',
+               'min:0'
+            ],
+            'moc-silnika' =>[
+                'required',
+                'integer',
+               'min:50',
+               'max:1000'
+            ],
+            'skrzynia-biegow' =>[
+                'required',
+                'string'
+            ],
+            'kolor' =>[
                 'required',
                 'string'
             ]
