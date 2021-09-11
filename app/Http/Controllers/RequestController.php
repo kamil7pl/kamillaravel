@@ -14,7 +14,11 @@ class RequestController extends Controller
     }
     public function store(CarRequest $request)
     {
+        //dd($request->all());
         $car = new Car($request->all());
+        //dd(request()->hasFile('image'));
+        $path = $request->file('image')->store('kamFour');
+        $car->image_path = $path;
         $car->save();
         return view('request.index');
     }

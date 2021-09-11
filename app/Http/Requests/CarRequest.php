@@ -40,7 +40,11 @@ class CarRequest extends FormRequest
             'price' => [
                 'nullable',                
                 'integer'
-            ]
+            ],
+            /*'image' => [
+                'nullable',                
+                'file'
+            ]*/
         ];
     }
 }
