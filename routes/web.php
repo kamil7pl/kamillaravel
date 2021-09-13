@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/grid','App\Http\Controllers\GridController@show');
+Route::get('/form', [App\Http\Controllers\ImageController::class, 'index'])->name('form.index');
+Route::put('/request', [App\Http\Controllers\ImageController::class, 'store'])->name('request.index');
