@@ -8,20 +8,22 @@ use App\Models\Car;
 
 class RequestController extends Controller
 {
-    public function index()
-    {
-        return view('form.index');
+    public function index($slug)
+    {        
+        return view('form.index')
+        ->with('sl', $slug);
     }
-    public function store(CarRequest $request)
+    /*public function store(CarRequest $request)
     {
         $car = new Car($request->all());
         $car->save();
         return view('request.index');
-    }
-    public function read()
+    }*/
+    public function update($sl, CarRequest $request)
     {
-        $cars = Car::all();        
-        return view('read.index')
-        ->with('cars', $cars);
+        //dd($request->all());
+        //dd($sl);
+        $cars = Car::updateOrCreate(['id' => $sl], $request->all());
+        return 'Zaktualizowano'.$sl;
     }
 }

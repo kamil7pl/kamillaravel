@@ -1,7 +1,7 @@
 @include('partials.head')
         @include('partials.navbar')
           <div class="content">
-              {!! Form::open(['route' => 'request.index', 'method' => 'put']) !!}
+              {!! Form::open(['url' => '/update/'.$sl, 'method' => 'put']) !!}
               <div class="mb-3">
                 {!! Form::label('brand', 'Brand: ', ['class' => 'form-label']) !!}
                 {!! Form::text('brand', '', ['class' => 'form-control']) !!}
