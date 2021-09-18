@@ -18,4 +18,10 @@ class RequestController extends Controller
         $car->save();
         return view('request.index');
     }
+    public function read()
+    {
+        $cars = Car::all();        
+        return view('read.index')
+        ->with('cars', $cars);
+    }
 }
