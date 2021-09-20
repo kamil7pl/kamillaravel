@@ -16,6 +16,29 @@ class RequestController extends Controller
     {
         $car = new Car($request->all());
         $car->save();
-        return view('request.index');
+        return redirect()->route('show.index');
+    }
+    public function show()
+    {
+        $cars = Car::all();
+        return view('show.index')
+        ->with('cars', $cars);
+    }
+    public function edit($id)
+    {
+        $car =Car::find($id);       
+        return view('edit.index')
+        ->with('id', $id)
+        ->with('car', $car);
+    }
+    public function update($id, CarRequest $request)
+    {
+        Car::updateOrCreate(['id' => $id], $request->all());
+        return redirect()->route('show.index');
+    }
+    public function delete($id)
+    {
+        Car::find($id)->delete();
+        return redirect()->route('show.index');
     }
 }
