@@ -13,7 +13,9 @@
   </head>
   <body>
     <h1>Hello, world!</h1>
-
+    @can(App\Enums\UserRole::ADMIN)
+    <h1>Jesteś {{ App\Enums\UserRole::ADMIN }}.</h1>
+    @endcan
     <!--Kamil-->
     <div class="container-fluid">
         <div class="row my-5">
