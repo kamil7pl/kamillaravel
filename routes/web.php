@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/grid','App\Http\Controllers\GridController@show');
+Route::get('/p24', [App\Http\Controllers\P24Controller::class, 'index'])
+    ->name('p24.index');
